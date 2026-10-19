@@ -1,0 +1,784 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://stackblitzstartersyt2gpy2x-rgny--8080--2ed8f36d.local-credentialless.webcontainer.io/
+Subject: =?utf-8?Q?D'=20Burger=20-=20Gest=C3=A3o=20de=20CMV,=20Estoque=20e=20Renta?=
+ =?utf-8?Q?bilidade?=
+Date: Sun, 18 Oct 2026 22:48:13 GMT
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--T7Seux0bkuzyuFm3J2M6cH07X4xeI7593JjdPJEG4A----"
+
+
+------MultipartBoundary--T7Seux0bkuzyuFm3J2M6cH07X4xeI7593JjdPJEG4A----
+Content-Type: text/html
+Content-ID: <frame-901C42F63199E29CCA13946D96321610@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://stackblitzstartersyt2gpy2x-rgny--8080--2ed8f36d.local-credentialless.webcontainer.io/
+
+<!DOCTYPE html><html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-48531510-5c70-426a-b075-f04615e83187@mhtml.blink" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>D' Burger - Gestão de CMV, Estoque e Rentabilidade</title>
+  
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      D’ BURGER <span>| Gestão &amp; CMV Pro</span>
+    </div>
+    <button class="nav-toggle">☰</button>
+    <nav id="mainNav">
+      <button class="nav-btn active">📊 Dashboard</button>
+      <button class="nav-btn">🍔 Cardápio &amp; Fichas</button>
+      <button class="nav-btn">🥩 Insumos</button>
+      <button class="nav-btn">🧾 Notas de Compra</button>
+      <button class="nav-btn">📦 Estoque</button>
+      <button class="nav-btn">🧮 Precificação</button>
+      <button class="nav-btn">📈 Auditoria &amp; CSV</button>
+      <button class="nav-btn">⚙️ Configurações</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. DASHBOARD -->
+    <section id="view-dashboard" class="view-section active">
+      <div class="grid grid-4" style="margin-bottom: 18px;">
+        <div class="stat-card">
+          <div class="stat-title">Valor em Estoque</div>
+          <div class="stat-val" id="dash-val-estoque">R$&nbsp;82,00</div>
+          <div class="stat-sub" id="dash-itens-estoque">1 insumos monitorados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Produtos no Cardápio</div>
+          <div class="stat-val" id="dash-total-lanches">0</div>
+          <div class="stat-sub">Fichas técnicas cadastradas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">CMV Médio Cardápio</div>
+          <div class="stat-val" id="dash-cmv-medio">0,0%</div>
+          <div class="stat-sub">Ponderação direta de cardápio</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-title">Alertas de Reposição</div>
+          <div class="stat-val" id="dash-alertas-count" style="color: var(--yellow);">0</div>
+          <div class="stat-sub">Abaixo do estoque mínimo</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <h3>Desempenho Financeiro dos Hambúrgueres (D' Burger)</h3>
+          <span class="help-text">Atualizado em tempo real pelos custos de reposição</span>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Hambúrguer</th>
+                <th>Categoria</th>
+                <th>Preço Venda</th>
+                <th>CMV (R$)</th>
+                <th>CMV (%)</th>
+                <th>Markup</th>
+                <th>Reserva (12,1%)</th>
+                <th>Taxa Cartão</th>
+                <th>Saldo Est. Cartão</th>
+                <th>Saldo Est. Pix</th>
+                <th>Rentabilidade</th>
+                <th>Classif. Markup</th>
+              </tr>
+            </thead>
+            <tbody id="dash-table-body"><tr><td colspan="12" style="text-align: center; color: var(--text-muted);">Nenhum hambúrguer cadastrado no sistema.</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h4 style="margin-bottom: 12px; color: var(--yellow);">⚠️ Insumos Abaixo do Estoque Mínimo</h4>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Insumo</th>
+                  <th>Atual</th>
+                  <th>Mínimo</th>
+                  <th>Unidade</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody id="dash-alertas-body"><tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Nenhum insumo crítico.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-bottom: 12px; color: #38bdf8;">🔄 Auditoria de Impacto de Preços Recentes</h4>
+          <div id="dash-impacto-box" style="font-size: 0.85rem; color: var(--text-muted);">
+            Nenhuma alteração recente de custo de reposição detectada.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CARDÁPIO E FICHAS TÉCNICAS -->
+    <section id="view-fichas" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2>Cardápio e Fichas Técnicas</h2>
+        <button class="btn btn-primary">+ Nova Ficha Técnica</button>
+      </div>
+
+      <div class="grid grid-3" id="fichas-cards-container">
+        <!-- Cards dos lanches gerados dinamicamente -->
+      </div>
+    </section>
+
+    <!-- 3. CADASTRO DE INSUMOS -->
+    <section id="view-insumos" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2>Cadastro e Controle de Insumos</h2>
+        <button class="btn btn-primary">+ Cadastrar Insumo</button>
+      </div>
+
+      <div class="card">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Estoque Atual</th>
+                <th>Mínimo</th>
+                <th>Custo Reposição</th>
+                <th>Custo Médio Ponderado</th>
+                <th>Custo Unit. Consumo</th>
+                <th>Última Compra</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="insumos-table-body"><tr>
+          <td><strong>Bland bovino</strong></td>
+          <td><span class="badge badge-neutral">carne bovina</span></td>
+          <td style="">
+            82.000,00 g
+          </td>
+          <td>0,00 g</td>
+          <td>R$&nbsp;1,00 / kg</td>
+          <td>R$&nbsp;1,00 / kg</td>
+          <td style="color: #38bdf8; font-weight: 700;">R$&nbsp;0,00 / g</td>
+          <td>18/10/2026</td>
+          <td>
+            <button class="btn btn-sm btn-secondary">Editar</button>
+            <button class="btn btn-sm btn-danger">Excluir</button>
+          </td>
+        </tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. NOTAS DE COMPRA E ENTRADAS -->
+    <section id="view-notas" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2>Notas de Compra e Entradas de Estoque</h2>
+        <button class="btn btn-primary">+ Lançar Nota de Entrada</button>
+      </div>
+
+      <div class="card">
+        <p class="help-text" style="margin-bottom: 12px;">
+          <strong>Regra Fiscal D' Burger:</strong> O valor da nota dá entrada no estoque e atualiza os custos unitários. A nota <em>não</em> é lançada integralmente como custo de um hambúrguer individual. O cancelamento de nota estorna o estoque transacionalmente.
+        </p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Nota Fiscal</th>
+                <th>Fornecedor</th>
+                <th>Qtd Itens</th>
+                <th>Valor Total</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="notas-table-body">
+              <!-- Render via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ESTOQUE -->
+    <section id="view-estoque" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2>Movimentações &amp; Ajuste de Perdas</h2>
+        <button class="btn btn-secondary">📉 Registrar Descarte / Perda</button>
+      </div>
+
+      <div class="card">
+        <h3>Extrato de Movimentações de Estoque</h3>
+        <p class="help-text" style="margin-bottom: 12px;">Histórico imutável de entradas, perdas registradas e saídas operacionais.</p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data/Hora</th>
+                <th>Insumo</th>
+                <th>Tipo</th>
+                <th>Qtd Movimentada</th>
+                <th>Motivo / Origem</th>
+              </tr>
+            </thead>
+            <tbody id="movs-table-body">
+              <!-- Render via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CALCULADORA DE PRECIFICAÇÃO IDEAL -->
+    <section id="view-calculadora" class="view-section">
+      <div class="card" style="max-width: 800px; margin: 0 auto;">
+        <h2>Calculadora de Precificação Ideal - D' Burger</h2>
+        <p class="help-text" style="margin-bottom: 18px;">
+          Baseada na equação exata de formação de preço de venda com deduções sobre a receita bruta (Reserva Operacional 12,1%, Taxas de Maquininha e Margem de Contribuição Desejada).
+        </p>
+
+        <div class="grid grid-2">
+          <div class="form-group">
+            <label>Puxar CMV de Hambúrguer Existente:</label>
+            <select id="calc-select-ficha">
+              <option value="">-- Selecione ou digite manualmente --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>CMV Direto do Produto (R$):</label>
+            <input type="number" step="0.01" id="calc-cmv" value="7.32">
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="form-group">
+            <label>Reserva Operacional (%):</label>
+            <input type="number" step="0.1" id="calc-reserva" value="12.1">
+          </div>
+          <div class="form-group">
+            <label>Taxa de Cartão Estimada (%):</label>
+            <input type="number" step="0.01" id="calc-taxa" value="0.74">
+          </div>
+          <div class="form-group">
+            <label>Margem-Alvo Desejada (%):</label>
+            <input type="number" step="0.1" id="calc-margem" value="40.0">
+          </div>
+        </div>
+
+        <div class="card" style="background: var(--surface-card); margin-top: 16px;">
+          <h3 style="color: #38bdf8; margin-bottom: 12px;">Resultados das Sugestões de Preço</h3>
+          <div class="grid grid-3">
+            <div class="stat-card">
+              <div class="stat-title">Ponto de Equilíbrio Operacional</div>
+              <div class="stat-val" id="calc-preco-equilibrio">R$&nbsp;8,40</div>
+              <div class="stat-sub">Cobre exatamente CMV + taxas (Saldo R$ 0,00)</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--green);">
+              <div class="stat-title">Preço Ideal (Margem-Alvo)</div>
+              <div class="stat-val" id="calc-preco-alvo" style="color: var(--green);">R$&nbsp;15,52</div>
+              <div class="stat-sub" id="calc-sub-alvo">Atinge a margem configurada</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title">Preço Comercial Arredondado</div>
+              <div class="stat-val" id="calc-preco-arredondado">R$&nbsp;15,90</div>
+              <div class="stat-sub" id="calc-sub-arredondado">Formatado para cardápio (ex: ,90)</div>
+            </div>
+          </div>
+          <div id="calc-alerta-arredondamento" style="margin-top: 12px; font-size: 0.85rem;"><span style="color: var(--green);">✔️ O preço comercial arredondado atende ou supera a margem-alvo de 40.0%.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RELATÓRIOS E AUDITORIA -->
+    <section id="view-relatorios" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <h2>Relatórios Gerenciais e Auditoria</h2>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-secondary">📥 Exportar Cardápio (CSV)</button>
+          <button class="btn btn-secondary">📥 Exportar Estoque (CSV)</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Histórico e Auditoria de Recálculos</h3>
+        <p class="help-text" style="margin-bottom: 14px;">Log cronológico de alterações que impactaram os custos das receitas.</p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data/Hora</th>
+                <th>Tipo de Evento</th>
+                <th>Insumo / Referência</th>
+                <th>Preço Antigo</th>
+                <th>Novo Preço</th>
+                <th>Produtos Afetados</th>
+              </tr>
+            </thead>
+            <tbody id="audit-table-body">
+              <tr><td colspan="6" style="text-align: center; color: var(--text-muted);">Nenhuma alteração registrada até o momento.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CONFIGURAÇÕES E BACKUP -->
+    <section id="view-config" class="view-section">
+      <div class="card" style="max-width: 700px; margin: 0 auto;">
+        <h2>Configurações do Sistema D' Burger</h2>
+        <p class="help-text" style="margin-bottom: 16px;">Parâmetros financeiros base e segurança de dados.</p>
+
+        <form id="form-config">
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label>Taxa de Cartão Padrão (%):</label>
+              <input type="number" step="0.01" id="cfg-taxa-cartao" required="">
+            </div>
+            <div class="form-group">
+              <label>Taxa Pix / Dinheiro (%):</label>
+              <input type="number" step="0.01" id="cfg-taxa-pix" value="0.00" readonly="">
+              <span class="help-text">Fixa em 0% conforme regra D' Burger</span>
+            </div>
+            <div class="form-group">
+              <label>Reserva Operacional (%):</label>
+              <input type="number" step="0.01" id="cfg-reserva" required="">
+            </div>
+            <div class="form-group">
+              <label>Markup de Referência Meta (x):</label>
+              <input type="number" step="0.01" id="cfg-markup-meta" required="">
+            </div>
+            <div class="form-group">
+              <label>Margem de Contribuição Meta (%):</label>
+              <input type="number" step="0.1" id="cfg-margem-meta" required="">
+            </div>
+            <div class="form-group">
+              <label>Política de Precificação Padrão:</label>
+              <select id="cfg-politica-custo">
+                <option value="reposicao">Custo de Reposição (Mais Recente)</option>
+                <option value="medio">Custo Médio Ponderado</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Salvar Parâmetros</button>
+        </form>
+
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 24px 0;">
+
+        <h3>Preservação de Dados e Backup Local</h3>
+        <p class="help-text" style="margin-bottom: 14px;">
+          Os dados ficam armazenados no seu dispositivo via banco de dados IndexedDB persistente. Para garantir a segurança dos seus dados, faça backups regulares em arquivo JSON.
+        </p>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-secondary">💾 Fazer Backup Completo (JSON)</button>
+          <label class="btn btn-secondary" style="margin-bottom: 0;">
+            📂 Restaurar Backup <input type="file" id="fileRestore" accept=".json" style="display: none;">
+          </label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL: CADASTRAR/EDITAR INSUMO -->
+  <div class="modal-backdrop" id="modal-insumo">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-insumo-title">Cadastrar Novo Insumo</h3>
+        <button class="modal-close">×</button>
+      </div>
+      <form id="form-insumo">
+        
+        <div class="form-group">
+          <label>Nome do Insumo:</label>
+          <input type="text" id="insumo-nome" required="" placeholder="Ex: Carne Bovina Blend, Pão Brioche...">
+        </div>
+        <div class="grid grid-2">
+          <div class="form-group">
+            <label>Categoria:</label>
+            <select id="insumo-categoria" required="">
+              <option value="carne bovina">Carne Bovina</option>
+              <option value="frango">Frango</option>
+              <option value="pao">Pão</option>
+              <option value="queijo">Queijo</option>
+              <option value="embutidos">Embutidos / Bacon</option>
+              <option value="hortifruti">Hortifruti</option>
+              <option value="molhos">Molhos</option>
+              <option value="temperos">Temperos</option>
+              <option value="oleo">Óleo</option>
+              <option value="embalagem">Embalagem Individual</option>
+              <option value="bebida">Bebida</option>
+              <option value="outros">Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Fornecedor Habitual (Opcional):</label>
+            <input type="text" id="insumo-fornecedor" placeholder="Ex: Distribuidora Silva">
+          </div>
+        </div>
+
+        <div class="card" style="background: var(--surface-card); padding: 12px; margin-bottom: 12px;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: #fb923c; margin-bottom: 8px;">Dados de Compra &amp; Conversão</div>
+          <div class="grid grid-3">
+            <div class="form-group">
+              <label>Unidade de Compra:</label>
+              <select id="insumo-un-compra" required="">
+                <option value="kg">Quilograma (kg)</option>
+                <option value="g">Grama (g)</option>
+                <option value="L">Litro (L)</option>
+                <option value="ml">Mililitro (ml)</option>
+                <option value="pacote">Pacote</option>
+                <option value="caixa">Caixa</option>
+                <option value="fardo">Fardo</option>
+                <option value="bandeja">Bandeja</option>
+                <option value="duzia">Dúzia</option>
+                <option value="unidade">Unidade (un)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Unidade de Consumo:</label>
+              <select id="insumo-un-consumo" required="">
+                <!-- Preenchido via script -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Conteúdo / Fator Conversão:</label>
+              <input type="number" step="0.0001" id="insumo-fator" required="" value="1000">
+              <span class="help-text" id="insumo-fator-help">1 kg = 1000 g</span>
+            </div>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label>Rendimento Aproveitável (%):</label>
+              <input type="number" step="0.1" id="insumo-rendimento" value="100" required="" min="1" max="100">
+              <span class="help-text">100% se não houver aparas/limpeza</span>
+            </div>
+            <div class="form-group">
+              <label>Estoque Mínimo (em Un. Consumo):</label>
+              <input type="number" step="0.01" id="insumo-est-minimo" value="0" required="">
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-2" id="box-dados-iniciais-compra">
+          <div class="form-group">
+            <label>Preço Pago Inicial (R$):</label>
+            <input type="number" step="0.01" id="insumo-preco-inicial" placeholder="0,00" value="0">
+          </div>
+          <div class="form-group">
+            <label>Qtd Comprada Inicial (em Un. Compra):</label>
+            <input type="number" step="0.01" id="insumo-qtd-inicial" placeholder="0" value="0">
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px;">
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Salvar Insumo</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: LANÇAR NOTA DE COMPRA -->
+  <div class="modal-backdrop" id="modal-nota">
+    <div class="modal-card" style="max-width: 800px;">
+      <div class="modal-header">
+        <h3>Lançar Nota de Compra e Entrada de Estoque</h3>
+        <button class="modal-close">×</button>
+      </div>
+      <form id="form-nota">
+        <div class="grid grid-3">
+          <div class="form-group">
+            <label>Data da Compra:</label>
+            <input type="date" id="nota-data" required="">
+          </div>
+          <div class="form-group">
+            <label>Fornecedor:</label>
+            <input type="text" id="nota-fornecedor" placeholder="Ex: Frigorífico Central">
+          </div>
+          <div class="form-group">
+            <label>Número da Nota / NF-e:</label>
+            <input type="text" id="nota-numero" placeholder="Opcional">
+          </div>
+        </div>
+
+        <div style="margin: 14px 0 8px 0; display: flex; justify-content: space-between; align-items: center;">
+          <h4>Itens da Nota</h4>
+          <button type="button" class="btn btn-sm btn-secondary">+ Adicionar Item</button>
+        </div>
+
+        <div id="nota-itens-container" style="display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; padding-right: 4px;">
+          <!-- Linhas de itens inseridas via JS -->
+        </div>
+
+        <div class="grid grid-2" style="margin-top: 14px;">
+          <div class="form-group">
+            <label>Frete Rateado Total (R$):</label>
+            <input type="number" step="0.01" id="nota-frete" value="0.00">
+          </div>
+          <div class="form-group">
+            <label>Desconto Global da Nota (R$):</label>
+            <input type="number" step="0.01" id="nota-desconto" value="0.00">
+          </div>
+        </div>
+
+        <div style="font-size: 1.1rem; font-weight: 800; text-align: right; margin: 12px 0;" id="nota-total-geral">
+          Total da Nota: R$ 0,00
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 8px;">
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Registrar Entrada no Estoque</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: MONTAR FICHA TÉCNICA -->
+  <div class="modal-backdrop" id="modal-ficha">
+    <div class="modal-card" style="max-width: 850px;">
+      <div class="modal-header">
+        <h3 id="modal-ficha-title">Montar Ficha Técnica do Hambúrguer</h3>
+        <button class="modal-close">×</button>
+      </div>
+      <form id="form-ficha">
+        
+        <div class="grid grid-3">
+          <div class="form-group">
+            <label>Nome do Hambúrguer:</label>
+            <input type="text" id="ficha-nome" required="" placeholder="Ex: D’ Burger Especial">
+          </div>
+          <div class="form-group">
+            <label>Categoria:</label>
+            <select id="ficha-categoria" required="">
+              <option value="artesanal">Artesanal</option>
+              <option value="smash">Smash</option>
+              <option value="simples">Simples</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Preço de Venda Praticado (R$):</label>
+            <input type="number" step="0.01" id="ficha-preco" required="" placeholder="Ex: 32.00">
+          </div>
+        </div>
+
+        <div style="margin: 14px 0 8px 0; display: flex; justify-content: space-between; align-items: center;">
+          <h4>Composição de Ingredientes &amp; Embalagens</h4>
+          <button type="button" class="btn btn-sm btn-secondary">+ Inserir Ingrediente/Embalagem</button>
+        </div>
+
+        <div id="ficha-ingredientes-container" style="display: flex; flex-direction: column; gap: 8px; max-height: 250px; overflow-y: auto;">
+          <!-- Linhas de ingredientes da receita -->
+        </div>
+
+        <!-- Resumo ao vivo da rentabilidade -->
+        <div class="card" style="background: var(--surface-card); margin-top: 14px; padding: 12px;">
+          <div class="grid grid-4" style="text-align: center;">
+            <div>
+              <div class="stat-title">CMV Total</div>
+              <div style="font-weight: 800; font-size: 1.1rem; color: #fb923c;" id="ficha-live-cmv">R$ 0,00</div>
+              <div class="stat-sub" id="ficha-live-cmv-pct">0,0%</div>
+            </div>
+            <div>
+              <div class="stat-title">Markup</div>
+              <div style="font-weight: 800; font-size: 1.1rem;" id="ficha-live-markup">0,00x</div>
+              <div class="stat-sub" id="ficha-live-markup-tag">-</div>
+            </div>
+            <div>
+              <div class="stat-title">Reserva (12,1%)</div>
+              <div style="font-weight: 800; font-size: 1.1rem;" id="ficha-live-reserva">R$ 0,00</div>
+              <div class="stat-sub">Proteção de fluxo</div>
+            </div>
+            <div>
+              <div class="stat-title">Saldo Est. Cartão</div>
+              <div style="font-weight: 800; font-size: 1.1rem;" id="ficha-live-saldo">R$ 0,00</div>
+              <div class="stat-sub" id="ficha-live-saldo-tag">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px;">
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Salvar Ficha Técnica</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTRAR PERDA / DESCARTE -->
+  <div class="modal-backdrop" id="modal-ajuste">
+    <div class="modal-card" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3>Registrar Perda / Descarte de Estoque</h3>
+        <button class="modal-close">×</button>
+      </div>
+      <form id="form-ajuste">
+        <div class="form-group">
+          <label>Insumo:</label>
+          <select id="ajuste-insumo" required=""></select>
+        </div>
+        <div class="form-group">
+          <label>Quantidade Perdida / Descartada (em Un. Consumo):</label>
+          <input type="number" step="0.0001" id="ajuste-qtd" required="" min="0.0001">
+        </div>
+        <div class="form-group">
+          <label>Motivo da Perda:</label>
+          <input type="text" id="ajuste-motivo" required="" placeholder="Ex: Validade vencida, queda no chão, queima...">
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 14px;">
+          <button type="button" class="btn btn-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-danger">Confirmar Baixa por Perda</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container"></div>
+
+  
+
+
+      
+    </body></html>
+------MultipartBoundary--T7Seux0bkuzyuFm3J2M6cH07X4xeI7593JjdPJEG4A----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-48531510-5c70-426a-b075-f04615e83187@mhtml.blink
+
+@charset "utf-8";
+
+:root { --primary: #c2410c; --primary-hover: #9a3412; --bg: #0f172a; --surface: #1e293b; --surface-card: #243247; --text: #f8fafc; --text-muted: #94a3b8; --border: #334155; --green: #10b981; --yellow: #f59e0b; --red: #ef4444; --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; font-family: var(--font); }
+
+body { background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+
+header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0px; z-index: 100; }
+
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.25rem; color: rgb(251, 146, 60); }
+
+.brand span { color: var(--text); font-weight: 400; font-size: 0.9rem; }
+
+.nav-toggle { display: none; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+nav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0px; }
+
+.nav-btn { background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: var(--text-muted); padding: 8px 12px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: 0.2s; }
+
+.nav-btn:hover { background: rgba(255, 255, 255, 0.05); color: var(--text); }
+
+.nav-btn.active { background: var(--primary); color: rgb(255, 255, 255); }
+
+main { flex: 1 1 0%; padding: 16px; max-width: 1400px; width: 100%; margin: 0px auto; }
+
+.view-section { display: none; }
+
+.view-section.active { display: block; animation: 0.15s ease-in 0s 1 normal none running fadeIn; }
+
+@keyframes fadeIn { 
+  0% { opacity: 0; transform: translateY(3px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 18px; }
+
+.grid { display: grid; gap: 16px; }
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+.stat-card { background: var(--surface-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; position: relative; }
+
+.stat-title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+
+.stat-val { font-size: 1.4rem; font-weight: 800; }
+
+.stat-sub { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+
+.badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; }
+
+.badge-green { background: rgba(16, 185, 129, 0.2); color: rgb(52, 211, 153); border: 1px solid rgba(16, 185, 129, 0.4); }
+
+.badge-yellow { background: rgba(245, 158, 11, 0.2); color: rgb(251, 191, 36); border: 1px solid rgba(245, 158, 11, 0.4); }
+
+.badge-red { background: rgba(239, 68, 68, 0.2); color: rgb(248, 113, 113); border: 1px solid rgba(239, 68, 68, 0.4); }
+
+.badge-neutral { background: rgba(148, 163, 184, 0.2); color: rgb(203, 213, 225); border: 1px solid rgba(148, 163, 184, 0.4); }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+
+label { font-size: 0.85rem; font-weight: 600; color: rgb(203, 213, 225); }
+
+input, select, textarea { background: rgb(15, 23, 42); border: 1px solid var(--border); color: rgb(255, 255, 255); padding: 9px 12px; border-radius: 8px; font-size: 0.9rem; outline: none; transition: border 0.2s; }
+
+input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+
+.help-text { font-size: 0.75rem; color: var(--text-muted); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; transition: 0.2s; }
+
+.btn-primary { background: var(--primary); color: rgb(255, 255, 255); }
+
+.btn-primary:hover { background: var(--primary-hover); }
+
+.btn-secondary { background: rgb(51, 65, 85); color: rgb(255, 255, 255); }
+
+.btn-secondary:hover { background: rgb(71, 85, 105); }
+
+.btn-danger { background: rgba(239, 68, 68, 0.2); color: rgb(248, 113, 113); border: 1px solid rgba(239, 68, 68, 0.4); }
+
+.btn-danger:hover { background: rgba(239, 68, 68, 0.4); }
+
+.btn-sm { padding: 4px 8px; font-size: 0.75rem; border-radius: 6px; }
+
+.table-container { width: 100%; overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+
+th { background: rgb(22, 32, 50); padding: 10px 12px; color: var(--text-muted); font-weight: 700; border-bottom: 1px solid var(--border); }
+
+td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+
+tr:hover td { background: rgba(255, 255, 255, 0.02); }
+
+.modal-backdrop { position: fixed; inset: 0px; background: rgba(0, 0, 0, 0.75); display: none; align-items: center; justify-content: center; z-index: 200; padding: 16px; backdrop-filter: blur(2px); }
+
+.modal-backdrop.open { display: flex; }
+
+.modal-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; width: 100%; max-width: 650px; max-height: 90vh; overflow-y: auto; padding: 20px; box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 25px -5px; }
+
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+
+.modal-close { background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; }
+
+#toast-container { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 999; }
+
+.toast { background: var(--surface-card); border-left: 4px solid var(--primary); padding: 12px 18px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px; color: rgb(255, 255, 255); font-size: 0.85rem; min-width: 250px; }
+
+.toast-success { border-color: var(--green); }
+
+.toast-error { border-color: var(--red); }
+
+.toast-warning { border-color: var(--yellow); }
+
+@media (max-width: 850px) {
+  .nav-toggle { display: block; }
+  nav { display: none; position: absolute; top: 100%; left: 0px; right: 0px; background: var(--surface); flex-direction: column; padding: 12px; border-bottom: 1px solid var(--border); }
+  nav.open { display: flex; }
+  .nav-btn { text-align: left; width: 100%; padding: 10px; }
+}
+------MultipartBoundary--T7Seux0bkuzyuFm3J2M6cH07X4xeI7593JjdPJEG4A------
